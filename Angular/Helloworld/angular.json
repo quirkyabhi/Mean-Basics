@@ -21,12 +21,22 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/images",
             ],
             "styles": [
-              "src/styles.css"
+            
+              "src/assets/style/bootstrap.min.css",
+              "src/assets/css/animate.css",
+              
+              "src/assets/css/project.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/bootstrap.bundle.js",
+              "src/assets/js/bootstrap.bundle.js.map",
+              "src/assets/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {

@@ -1,2 +1,32 @@
-<h1> App component</h1>
+<!-- <h1> App component</h1> -->
+<br>
 <app-home></app-home>
+<button disabled={{disabled}}>CLICK HERE</button>
+<button [disabled]="disabled">CLICK HERE</button> 
+<!-- //property binding -->
+<br>
+<!-- <label for="name">name</label>
+<br><br>
+<input type="text" #myInput> -->
+<!-- <button (click)="onClick(myInput.value)">CLICK HERE</button>  -->
+
+<h1>{{name}}</h1>
+<!-- //event binding template reference variable-->
+<!-- <app-about></app-about> -->
+<!-- <div class=" app-home"></div> -->
+<!-- <div app-home></div> -->
+<label for="name">no1</label>
+<br>
+<input type="text" #no1>
+<br>
+<label for="name">no2</label>
+<br>
+<input type="text" #no2>
+<br>
+<!-- <button (click)="onClick(no1.value, no2.value)">Result</button>  -->
+<!-- <textarea name="res" id="" cols="" rows="">{{result}}</textarea> -->
+<label for="username" >user name</label>
+<input type="text" [(ngModel)]="name">
+<h1> {{name}}</h1>
+
+
