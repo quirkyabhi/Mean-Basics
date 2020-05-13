@@ -28,5 +28,25 @@
 <label for="username" >user name</label>
 <input type="text" [(ngModel)]="name">
 <h1> {{name}}</h1>
+<h2>{{name | uppercase}}</h2>
+<h2>{{name | lowercase}}</h2>
+<h2>{{name | titlecase}}</h2>
+<h2>{{name | uppercase}}</h2>
 
+<button class="btn btn-danger">yooo</button>
+
+<app-home [parentData]="of" (childEvent)="message=$event"></app-home>
+
+<h2>{{message | uppercase}}</h2>
+<h2>{{message | lowercase}}</h2>
+<h2>{{message | titlecase}}</h2>
+<h2>{{1.4543 | number:"2.1-3"}}</h2>
+<h2>{{1.4543 | percent}}</h2>
+<h2>{{1.4543 | currency}}</h2>
+<h2>{{date | date: "shortDate"}}</h2>
+<h2>{{date | date: "shortTime"}}</h2>
+<h2>{{date | date: "short"}}</h2>
+<h2>{{date}}</h2>
+<app-empdetails [empData]="emp"></app-empdetails>
+<app-emplist [empData]="emp"></app-emplist>
 

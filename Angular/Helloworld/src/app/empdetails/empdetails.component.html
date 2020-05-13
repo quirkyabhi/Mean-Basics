@@ -1,0 +1,16 @@
+<p>empdetails works!</p>
+<table>
+    <tr>
+        <th class=" p-4">ID</th>
+        <th class=" p-4">Name</th>
+        <th class=" p-4">Salary</th>
+        <th class=" p-4">Department</th>
+    </tr>
+    <tr class=" p-4" *ngFor="let item of empData; index as i">
+        <td class="p-4">{{item.id}}</td>
+        <td class="p-4">{{item.name}}</td>
+        <td class="p-4">{{item.salary}}</td>
+        <td class="p-4">{{item.dept}}</td>
+
+    </tr>
+</table>

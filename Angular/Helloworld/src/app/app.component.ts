@@ -14,7 +14,14 @@ export class AppComponent {
     // alert("button clicked")
     alert("hello " + name)
   }
-
+  of="app data"
+  message=""
+   public date = new Date();
+   emp=[
+     {"id":101,"name":"abhi","salary":55000,"dept":"DB"},
+     {"id":102,"name":"abhijeet","salary":65000,"dept":"Testing"},
+     {"id":103,"name":"avi","salary":45000,"dept":"Cloud"}
+    ]
   // fname:string 
   // lname:string
   // email:string

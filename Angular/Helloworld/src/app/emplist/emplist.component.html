@@ -1,0 +1,12 @@
+<p>emplist works!</p>
+<table>
+    <tr>
+        <th class=" p-4">ID</th>
+        <th class=" p-4">Name</th>
+    </tr>
+    <tr class=" p-4" *ngFor="let item of empData; index as i">
+        <td class="p-4">{{item.id}}</td>
+        <td class="p-4">{{item.name}}</td>
+
+    </tr>
+</table>

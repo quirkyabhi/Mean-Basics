@@ -48,9 +48,25 @@
 
 <label for="">NAME : </label> <input type="text" [(ngModel)]="pname">
 <button class=" btn btn-danger" (click)="displayPerson(pname)">ADD NAME</button>
-<h3 *ngFor="let item of personArray; index as i">
+<!-- <h3 *ngFor="let item of personArray; index as i">
     <h2> {{i+1}}  {{item}}</h2>
     <button class="btn btn-dark" (click)=removePerson(i);>Remove</button>
-</h3>
+</h3> -->
+<table>
+    <tr>
+        <th class="p-4">ID</th>
+        <th class="p-4">Name</th>
+        <th class="p-4">Remove</th>
+    </tr>
+    <tr class=" " *ngFor="let item of personArray; index as i">
+        <td class="p-4">{{i+1}}</td>
+        <td class="p-4">{{item}}</td>
+        <td class="p-4"><button class="btn btn-dark" (click)=removePerson(i);>Remove</button></td>
+</table>
 <br><br><br>
 <h3>{{personArray}}</h3>
+<h1>{{parentData}}</h1>
+
+<button class="btn btn-dark"  (click)=fireEvent()>Fire Event</button>
+<br>
+<h2>{{person | json}}</h2>
