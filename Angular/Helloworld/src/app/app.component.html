@@ -47,6 +47,77 @@
 <h2>{{date | date: "shortTime"}}</h2>
 <h2>{{date | date: "short"}}</h2>
 <h2>{{date}}</h2>
-<app-empdetails [empData]="emp"></app-empdetails>
-<app-emplist [empData]="emp"></app-emplist>
+<!-- <app-empdetails [empData]="emp"></app-empdetails>
+<app-emplist [empData]="emp"></app-emplist> -->
+<!-- <app-empdetails ></app-empdetails>
+<app-emplist ></app-emplist> -->
+<ul>
+    <li><a href="" [routerLink]="['/employeeList']" routerLinkActive="router-link-active" > employee list </a></li>
+    <li><a href="" [routerLink]="['/employeeDetails']" routerLinkActive="router-link-active" >employee details</a></li>
 
+</ul>
+<router-outlet></router-outlet>
+<!-- <div class=" container mt-50">
+<div class=" col-md-6 offset-md-3">
+
+<form action="" #signupForm='ngForm' (ngSubmit)="signupForm.form.valid && onSubmit() "novalidate>
+    {{signupForm.value | json }}
+    <div class=" form-group">
+        <label for="">First Name</label>
+        <input type="text" name="fName" class=" form-control" #fName="ngModel" [(ngModel)]="signupObj.fName" [ngClass]="{'is-invalid': signupForm.submitted && fName.invalid}" required>
+        <div *ngIf="signupForm.submitted && fName.invalid">
+            <span class="error">First Name Invalid</span>
+        </div>
+    </div>
+    <div class=" form-group">
+        <label for="">Last Name</label>
+        <input type="text" name="lName" class=" form-control" [(ngModel)]="signupObj.lName" #lName="ngModel"[ngClass]="{'is-invalid': signupForm.submitted && lName.invalid}" required>
+        <div *ngIf="signupForm.submitted && lName.invalid">
+            <span class="error">Last Name Invalid</span>
+        </div>
+    </div>
+    <div class=" form-group">
+        <label for="">Email</label>
+        <input type="email" name="email" class=" form-control" [(ngModel)]="signupObj.email" #email="ngModel"[ngClass]="{'is-invalid': signupForm.submitted && email.invalid}" required email>
+        <div *ngIf="signupForm.submitted && email.invalid">
+            <div class="error" *ngIf="email.errors.required">Email is required </div>
+            <div class="error" *ngIf="email.errors.email">Invalid Email </div>
+        </div>
+    </div>
+    <div class=" form-group">
+        <label for="">Password</label>
+        <input type="password" name="password" class=" form-control" [(ngModel)]="signupObj.password" #password="ngModel"[ngClass]="{'is-invalid': signupForm.submitted && password.invalid}" required minlength="6">
+        <div *ngIf="signupForm.submitted && password.invalid">
+            <div class="error" *ngIf="password.errors.required">Password is required </div>
+            <div class="error" *ngIf="password.errors.minlength">Password Invalid </div>
+        </div>
+        <div *ngIf="password.valid">
+            <div class="success"> Success</div>
+        </div>
+    </div>
+    <button type="submit" class=" btn btn-primary">Submit</button>
+</form>
+</div>
+</div> -->
+
+
+<div class="container mt-50">
+    <div class="col-md-6 offset-md-3">
+        <h3> Login Form</h3>
+        <h3 appCustomStyle>Custom Directive</h3>
+        <form action="" [formGroup]="loginForm">
+            <div class="form-group">
+                <label for=""> Email address</label>
+                <input type="email" class=" form-control" formControlName="email" placeholder="email">
+                <span *ngIf="email.touched && email.invalid" class="error"> email is invalid</span>
+            </div>
+            <div class="form-group">
+                <label for=""> Password</label>
+                <input type="password" class=" form-control" formControlName="password" placeholder="password">
+                <span *ngIf="password.touched && password.invalid" class="error"> password is invalid</span>
+            </div>
+            <button type="submit" class=" btn btn-info">Submit</button>
+        </form>
+    </div>
+
+</div>

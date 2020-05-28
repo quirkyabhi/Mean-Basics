@@ -7,10 +7,14 @@
         <th class=" p-4">Department</th>
     </tr>
     <tr class=" p-4" *ngFor="let item of empData; index as i">
+        <!-- <span *ngIf="Id==item.id; then thenblock"></span> -->
+        <!-- <ng-template #thenblock> -->
         <td class="p-4">{{item.id}}</td>
         <td class="p-4">{{item.name}}</td>
         <td class="p-4">{{item.salary}}</td>
         <td class="p-4">{{item.dept}}</td>
+        <!-- </ng-template>  -->
 
     </tr>
 </table>
+{{Id}}
